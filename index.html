@@ -1,40 +1,134 @@
 <!DOCTYPE html>
-<html lang="fr"
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CookEasy - Des recettes simples et rapides pour tous les jours</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <header class="site-header">
-        <a href="index.html" class="logo"><img/Logo.png" alt="">CookEasy</a>
+        <a href="index.html" class="logo"><img src="img/Logo.png" alt="">CookEasy</a>
         <nav aria-label="Navigation principale">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="#recettes.html">Recettes</a></li>
+                <li><a href="#recettes">Toutes les recettes</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">  <!-- étape 3 --> </section>
-        <section id="recettes" class="recipes"> <!-- étapes 3-4 --> </section>
-        <section class="tip">  <!-- étape 3 --> </section>
+        <section class="hero">
+            <p class="eyebrow">Cuisinez avec plaisir</p>
+            <h1>Des recettes simples pour se régaler chaque jour</h1>
+            <p>Découvrez des idées gourmandes, faciles à préparer et accessibles à tous. À vos fourneaux !</p>
+            <a href="#recettes" class="btn btn-accent">Explorer les recettes <img src="img/ArrowIcon.png" alt=""></a>
+        </section>
+
+        <section id="recettes" class="recipes">
+            <p class="eyebrow">Nos idées du moment</p>
+            <h2>À cuisiner sans modération</h2>
+            <p>Six idées gourmandes pour toutes les envies.</p>
+
+            <div class="filters" role="group" aria-label="Filtrer par difficulté">
+                <button type="button" class="filter-btn active" data-filter="all">Toutes les recettes</button>
+                <button type="button" class="filter-btn" data-filter="facile">Facile</button>
+                <button type="button" class="filter-btn" data-filter="moyen">Moyen</button>
+            </div>
+
+            <div class="recipe-list">
+                <article class="recipe-card" data-id="carbonara" data-difficulty="facile">
+                    <img src="img/carbonara.jpg" alt="Assiettes de pâtes à la carbonara">
+                    <div class="recipe-card-body">
+                        <span class="badge badge-facile">Facile</span>
+                        <h3>Pâtes carbonara</h3>
+                        <p class="recipe-time"><img src="img/ClockIcon.png" alt=""> 20 min de préparation</p>
+                        <button type="button" class="recipe-link">Voir la recette <img src="img/ArrowIcon.png"
+                                alt=""></button>
+                    </div>
+                </article>
+
+                <article class="recipe-card" data-id="avocado-toast" data-difficulty="facile">
+                    <img src="img/avocado-toast.jpg" alt="Deux tartines d'avocat écrasé">
+                    <div class="recipe-card-body">
+                        <span class="badge badge-facile">Facile</span>
+                        <h3>Avocado toast</h3>
+                        <p class="recipe-time"><img src="img/ClockIcon.png" alt=""> 10 min de préparation</p>
+                        <button type="button" class="recipe-link">Voir la recette <img src="img/ArrowIcon.png"
+                                alt=""></button>
+                    </div>
+                </article>
+
+                <article class="recipe-card" data-id="risotto" data-difficulty="moyen">
+                    <img src="img/risotto.jpg" alt="Risotto aux champignons dans un bol">
+                    <div class="recipe-card-body">
+                        <span class="badge badge-moyen">Moyen</span>
+                        <h3>Risotto aux champignons</h3>
+                        <p class="recipe-time"><img src="img/ClockIcon.png" alt=""> 35 min de préparation</p>
+                        <button type="button" class="recipe-link">Voir la recette <img src="img/ArrowIcon.png" alt=""></button>
+                    </div>
+                </article>
+
+                <article class="recipe-card" data-id="curry" data-difficulty="moyen">
+                    <img src="img/curry.jpg" alt="Curry de poulet dans un bol">
+                    <div class="recipe-card-body">
+                        <span class="badge badge-moyen">Moyen</span>
+                        <h3>Curry de poulet</h3>
+                        <p class="recipe-time"><img src="img/ClockIcon.png" alt=""> 40 min de préparation</p>
+                        <button type="button" class="recipe-link">Voir la recette <img src="img/ArrowIcon.png" alt=""></button>
+                    </div>
+                </article>
+
+                <article class="recipe-card" data-id="pancakes" data-difficulty="facile">
+                    <img src="img/pancakes.jpg" alt="Pile de pancakes aux framboises">
+                    <div class="recipe-card-body">
+                        <span class="badge badge-facile">Facile</span>
+                        <h3>Pancakes moelleux</h3>
+                        <p class="recipe-time"><img src="img/ClockIcon.png" alt=""> 15 min de préparation</p>
+                        <button type="button" class="recipe-link">Voir la recette <img src="img/ArrowIcon.png" alt=""></button>
+                    </div>
+                </article>
+
+                <article class="recipe-card" data-id="fondant" data-difficulty="moyen">
+                    <img src="img/fondant.jpg" alt="Fondant au chocolat nappé de chocolat">
+                    <div class="recipe-card-body">
+                        <span class="badge badge-moyen">Moyen</span>
+                        <h3>Fondant au chocolat</h3>
+                        <p class="recipe-time"><img src="img/ClockIcon.png" alt=""> 25 min de préparation</p>
+                        <button type="button" class="recipe-link">Voir la recette <img src="img/ArrowIcon.png" alt=""></button>
+                    </div>
+                </article>
+                </div>
+
+                <a href="#recettes" class="btn btn-accent">Voir plus de recettes <img src="img/ArrowIcon.png" alt=""></a>
+        </section>
+        
+        <section class="tip">
+            <div class="tip-text">
+                <p class="eyebrow">Simple et efficace</p>
+                <h2>L'astuce du chef</h2>
+                <p>Pour réussir vos recettes, préparez tous vos ingrédients avant de commencer. Cette méthode, appelée
+                    mise en place, vous permet de cuisiner plus sereinement et de gagner du temps.</p>
+                <a href="#recettes">Retour aux recettes</a>
+            </div>
+            <img src="img/astuce.jpg" alt="Couteau et herbes fraîches sur une planche à découper">
+        </section>
 
     </main>
 
-    <footer class="site footer"> <!-- étape 3 -->
-        <p class="logo"><img src="img/Logo.png" alt="CookEasy"</p>
+    <footer class="site-footer">
+        <p class="logo"><img src="img/Logo.png" alt="CookEasy"></p>
         <p>La cuisine facile, chaque jour.</p>
-        <p><small>© 2026 CookEasy. Tous droits réservés. - <a href="#"Mentions légales</a></a></small></p>
+        <p><small>© 2026 CookEasy. Tous droits réservés. - <a href="#">Mentions légales</a></small></p>
     </footer>
 
-    <script type="module" src="js/mains.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
