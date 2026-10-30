@@ -42,14 +42,26 @@ ul {
     list-style: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 700;
     letter-spacing: -0.03em;
 }
 
-h1 { font-size: 56px; line-height: 1.05; }
-h2 { font-size: 36px; line-height: 1.15; }
-h3 { font-size: 20px; }
+h1 {
+    font-size: 56px;
+    line-height: 1.05;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 20px;
+}
 
 .eyebrow {
     font-size: 12px;
@@ -94,6 +106,36 @@ h3 { font-size: 20px; }
     color: var(--green);
 }
 
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-ghost {
+    background-color: var(--white);
+    color: var(--text-muted);
+    border: 1px solid #E1E5E1;
+}
+
+.cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background-color: var(--accent);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.cart-count[hidden] {
+    display: none;
+}
+
 /* ===== En-tête ===== */
 .site-header {
     display: flex;
@@ -127,6 +169,10 @@ h3 { font-size: 20px; }
 .site-header nav {
     flex: 1;
     display: flex;
+    justify-content: flex-end;
+}
+
+.site-header--overlay nav {
     justify-content: center;
 }
 
@@ -186,7 +232,7 @@ h3 { font-size: 20px; }
     color: var(--white);
 }
 
-.recipes > p:not(.eyebrow) {
+.recipes>p:not(.eyebrow) {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -244,7 +290,7 @@ h3 { font-size: 20px; }
     box-shadow: var(--shadow);
 }
 
-.recipe-card > img {
+.recipe-card>img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -271,8 +317,15 @@ h3 { font-size: 20px; }
     font-weight: 700;
 }
 
-.badge-facile { background-color: #E4EFE9; color: var(--green); }
-.badge-moyen  { background-color: #FCE6DA; color: #B5532A; }
+.badge-facile {
+    background-color: #E4EFE9;
+    color: var(--green);
+}
+
+.badge-moyen {
+    background-color: #FCE6DA;
+    color: #B5532A;
+}
 
 .recipe-time {
     display: flex;
@@ -352,7 +405,7 @@ h3 { font-size: 20px; }
     height: 14px;
 }
 
-.tip-inner > img {
+.tip-inner>img {
     flex: 1 1 0;
     min-width: 0;
     width: 50%;
@@ -381,6 +434,158 @@ h3 { font-size: 20px; }
     padding-top: 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===== Pages intérieures ===== */
+.page-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    padding: 64px var(--side);
+    background-color: #EDF2EE;
+}
+
+.page-hero--center {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.page-hero .eyebrow {
+    color: var(--green);
+}
+
+.page-hero p:not(.eyebrow) {
+    color: var(--text-muted);
+}
+
+.empty-message {
+    width: 100%;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+/* Mes recettes */
+.my-recipes {
+    padding: 64px var(--side) 96px;
+}
+
+.recipe-item {
+    flex: 0 0 calc((100% - 48px) / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.recipe-item .recipe-card {
+    flex: none;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.remove-link {
+    border: none;
+    background: none;
+    font: inherit;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Liste de courses */
+.shopping {
+    padding: 64px var(--side) 96px;
+}
+
+.shopping-cols {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.shopping-col {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.shopping-group {
+    overflow: hidden;
+    border: 1px solid #E6E9E4;
+    border-radius: var(--radius);
+    background-color: var(--white);
+}
+
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 22px;
+    border-bottom: 1px solid #E6E9E4;
+}
+
+.group-header h2 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.group-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background-color: #E4EFE9;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.shopping-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 22px;
+    border-bottom: 1px solid #EEF0EC;
+}
+
+.shopping-item:last-child {
+    border-bottom: none;
+}
+
+.shopping-item label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.shopping-item input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--green);
+}
+
+.shopping-item.checked span {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.item-remove {
+    border: none;
+    background: none;
+    font-size: 20px;
+    line-height: 1;
+    color: var(--text-muted);
+    cursor: pointer;
 }
 
 /* ===== Modale ===== */
@@ -437,8 +642,13 @@ h3 { font-size: 20px; }
     padding-left: 20px;
 }
 
-.modal-ingredients { list-style: disc; }
-.modal-steps { list-style: decimal; }
+.modal-ingredients {
+    list-style: disc;
+}
+
+.modal-steps {
+    list-style: decimal;
+}
 
 .modal-close {
     position: absolute;
@@ -468,10 +678,16 @@ h3 { font-size: 20px; }
         flex: 0 0 calc((100% - 24px) / 2);
     }
 
-    h1 { font-size: 44px; }
+    h1 {
+        font-size: 44px;
+    }
 
     .tip-text {
         padding: 32px;
+    }
+
+    .recipe-item {
+        flex: 0 0 calc((100% - 24px) / 2);
     }
 }
 
@@ -481,8 +697,13 @@ h3 { font-size: 20px; }
         flex: 0 0 100%;
     }
 
-    h1 { font-size: 34px; }
-    h2 { font-size: 28px; }
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
 
     .site-header {
         flex-direction: column;
@@ -512,7 +733,7 @@ h3 { font-size: 20px; }
         flex-direction: column;
     }
 
-    .tip-inner > img {
+    .tip-inner>img {
         flex: none;
         width: 100%;
         height: 220px;
@@ -520,5 +741,22 @@ h3 { font-size: 20px; }
 
     .site-footer {
         padding: 32px 16px;
+    }
+
+    .recipe-item {
+        flex: 0 0 100%;
+    }
+
+    .shopping-cols {
+        flex-direction: column;
+    }
+
+    .page-hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-hero--center {
+        align-items: center;
     }
 }

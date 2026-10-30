@@ -27,6 +27,11 @@ export class MyRecipes {
         this.save();
     }
 
+    clear() {
+        this.ids = [];
+        this.save();
+    }
+
     all() {
         return this.ids;
     }

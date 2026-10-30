@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma liste de courses – CookEasy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo"><img src="img/Logo.png" alt="CookEasy"></a>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#recettes">Toutes les recettes</a></li>
+                <li><a href="mes-recettes.html">Mes recettes</a></li>
+            </ul>
+        </nav>
+        <a href="liste-de-courses.html" class="btn btn-outline">Liste de courses <span class="cart-count" hidden>0</span></a>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div>
+                <p class="eyebrow">Prêt pour les courses</p>
+                <h1>Ma liste de courses</h1>
+                <p id="shopping-summary"></p>
+            </div>
+            <button type="button" class="btn btn-ghost" id="clear-list">Vider la liste</button>
+        </section>
+
+        <section class="shopping">
+            <div class="shopping-cols" id="shopping-groups"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <p class="logo"><img src="img/Logo.png" alt="CookEasy"></p>
+            <p>La cuisine facile, chaque jour.</p>
+        </div>
+        <p class="footer-copy"><small>© 2026 CookEasy. Tous droits réservés. – <a href="#">Mentions légales</a></small></p>
+    </footer>
+
+    <script type="module" src="js/shopping-page.js"></script>
+</body>
+
+</html>
