@@ -1,12 +1,15 @@
 export class Modal {
-    constructor(element) {
+    constructor(element, onAdd) {
         this.element = element;
+        this.onAdd = onAdd;
+        this.currentRecipe = null;
         this.image = element.querySelector(".modal-image");
         this.badge = element.querySelector(".modal-badge");
         this.title = element.querySelector("#modal-title");
         this.time = element.querySelector(".modal-time");
         this.ingredients = element.querySelector(".modal-ingredients");
         this.steps = element.querySelector(".modal-steps");
+        this.addButton = element.querySelector(".modal-add");
         this.closeButtons = element.querySelectorAll(".modal-close, .modal-close-btn");
         this.lastFocused = null;
     }
@@ -28,9 +31,16 @@ export class Modal {
                 this.close();
             }
         });
+
+        this.addButton.addEventListener("click", () => {
+            this.onAdd(this.currentRecipe);
+            this.setAdded(true);
+        })
     }
 
-    open(recipe) {
+    open(recipe, isAdded = false) {
+        this.currentRecipe = recipe;
+        this.setAdded(isAdded);
         this.lastFocused = document.activeElement;
 
         this.image.src = recipe.image;
@@ -56,6 +66,13 @@ export class Modal {
 
         this.element.hidden = false;
         this.closeButtons[0].focus();
+    }
+
+    setAdded(isAdded) {
+        this.addButton.disabled = isAdded;
+        this.addButton.textContent = isAdded
+            ? "Ingrédients ajoutés ✓"
+            : "Ajouter à la liste de courses";
     }
 
     close() {
