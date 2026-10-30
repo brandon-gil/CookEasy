@@ -13,15 +13,18 @@
 
 <body>
 
-    <header class="site-header">
-        <a href="index.html" class="logo"><img src="img/Logo.png" alt="">CookEasy</a>
+    <header class="site-header site-header--overlay">
+        <a href="index.html" class="logo"><img src="img/Logo.png" alt="CookEasy"></a>
         <nav aria-label="Navigation principale">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="#recettes">Toutes les recettes</a></li>
+                <li><a href="mes-recettes.html">Mes recettes</a></li>
+                <li><a href="liste-de-courses.html">Liste de courses</a></li>
             </ul>
         </nav>
+        <a href="#recettes" class="btn btn-light">Toutes les recettes</a>
     </header>
+
 
     <main>
         <section class="hero">
@@ -48,23 +51,30 @@
         </section>
 
         <section class="tip">
-            <div class="tip-text">
-                <p class="eyebrow">Simple et efficace</p>
-                <h2>L'astuce du chef</h2>
-                <p>Pour réussir vos recettes, préparez tous vos ingrédients avant de commencer. Cette méthode, appelée
-                    mise en place, vous permet de cuisiner plus sereinement et de gagner du temps.</p>
-                <a href="#recettes">Retour aux recettes</a>
+            <div class="tip-inner">
+                <div class="tip-text">
+                    <p class="eyebrow">Simple et efficace</p>
+                    <h2>L'astuce du chef</h2>
+                    <p>Pour réussir vos recettes, préparez tous vos ingrédients avant de commencer. Cette méthode,
+                        appelée
+                        mise en place, vous permet de cuisiner plus sereinement et de gagner du temps.</p>
+                    <a href="#recettes">Retour aux recettes <img src="img/ArrowIcon.png" alt=""></a>
+                </div>
+                <img src="img/astuce.jpg" alt="Couteau et herbes fraîches sur une planche à découper">
             </div>
-            <img src="img/astuce.jpg" alt="Couteau et herbes fraîches sur une planche à découper">
         </section>
 
     </main>
 
     <footer class="site-footer">
-        <p class="logo"><img src="img/Logo.png" alt="CookEasy"></p>
-        <p>La cuisine facile, chaque jour.</p>
-        <p><small>© 2026 CookEasy. Tous droits réservés. - <a href="#">Mentions légales</a></small></p>
+        <div class="footer-brand">
+            <p class="logo"><img src="img/Logo.png" alt="CookEasy"></p>
+            <p>La cuisine facile, chaque jour.</p>
+        </div>
+        <p class="footer-copy"><small>© 2026 CookEasy. Tous droits réservés. – <a href="#">Mentions légales</a></small>
+        </p>
     </footer>
+
 
     <div class="modal-overlay" id="recipe-modal" hidden>
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
