@@ -1,0 +1,131 @@
+/* ===== Variables ===== */
+:root {
+    --green: #2E6B50;
+    --cream: #F8F5EE;
+    --accent: #F29B6D;
+    --text: #252B25;
+    --text-muted: #6B716B;
+    --white: #FFFFFF;
+    --radius: 16px;
+    --shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    --max-width: 1200px;
+}
+
+/* ===== Global Styles ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--cream);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 { font-size: 48px; font-weight: 700; line-height: 1.1; }
+h2 { font-size: 32px; font-weight: 700; }
+h3 { font-size: 20px; font-weight: 700; }
+
+.eyebrow {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+}
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+.btn-accent:hover {
+    transform: translateY(-2px);
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/* ===== Cards ===== */
+.recipe-card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.recipe-card img:first-child {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card-body {
+    padding: 16px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.badge-facile { background: #E4EFE9; color: var(--green);}
+.badge-moyen { background: #FCE6DA; color: #B5532A;}
+
+.recipe-time {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.recipe-link {
+    background: none;
+    border: none;
+    font: inherit;
+    font-weight: 500;
+    color: var(--green);
+    cursor: pointer;
+}
