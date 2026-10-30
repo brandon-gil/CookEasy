@@ -66,6 +66,23 @@
         <p><small>© 2026 CookEasy. Tous droits réservés. - <a href="#">Mentions légales</a></small></p>
     </footer>
 
+        <div class="modal-overlay" id="recipe-modal" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button type="button" class="modal-close" aria-label="Fermer la fenêtre">×</button>
+            <img class="modal-image" src="" alt="">
+            <div class="modal-content">
+                <span class="badge modal-badge"></span>
+                <h2 id="modal-title"></h2>
+                <p class="recipe-time modal-time"></p>
+                <h3>Ingrédients</h3>
+                <ul class="modal-ingredients"></ul>
+                <h3>Préparation</h3>
+                <ol class="modal-steps"></ol>
+                <button type="button" class="btn btn-accent modal-close-btn">Fermer</button>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="js/main.js"></script>
 </body>
 
